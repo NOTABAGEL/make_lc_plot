@@ -11,7 +11,6 @@ MJDREF = 51910.0 + 7.428703703703703E-4
 spacer = "\n--------------------------------------------------\n"
 
 #by Jonathan Katz and Stack Overflow I know this is terrible OOP sorry
-#There is some chowdery code here, this is because of an implementation of an exponential fit that I abandoned.  This code can be refactored, but it works fine and speed or space isn't critical.
 
 debug = False  #you know what this is for
 
@@ -25,7 +24,7 @@ if not fname.endswith(".dat"):
     warnings.warn("Is the file a .dat?")
 
 def met_mjd(np_arr):
-    return np.divide(np_arr, 86400) #calculates the proportion of the met/mjd, not absolute time.  this is nescessary to calc the x error bars.  Add MJDREF for absolute time hey you are still reading
+    return np.divide(np_arr, 86400) #calculates the proportion of the met/mjd, not absolute time.  this is nescessary to calc the x error bars.  Add MJDREF for absolute time hey you are still reading this
 
 dat = np.genfromtxt(fname)
 
